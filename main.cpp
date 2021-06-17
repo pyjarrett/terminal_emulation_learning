@@ -62,13 +62,13 @@ namespace console {
  */
 int main()
 {
-	const HANDLE StdoutHandle = GetStdHandle(STD_OUTPUT_HANDLE);
+	HANDLE StdoutHandle = GetStdHandle(STD_OUTPUT_HANDLE);
 	if (StdoutHandle == INVALID_HANDLE_VALUE)
 	{
 		errors::Die("Unable to get stdout console handle");
 	}
 
-	const HANDLE StdinHandle = GetStdHandle(STD_INPUT_HANDLE);
+	HANDLE StdinHandle = GetStdHandle(STD_INPUT_HANDLE);
 	if (StdinHandle == INVALID_HANDLE_VALUE)
 	{
 		errors::Die("Unable to get stdout console handle");
@@ -77,10 +77,10 @@ int main()
 
 
 	std::cout << "STDOUT:\n";
-	console::printCapabilities(StdoutHandle);
+    console::printCapabilities(StdoutHandle);
 
 	std::cout << '\n';
 	std::cout << "STDIN:\n";
-	console::printCapabilities(StdinHandle);
+    console::printCapabilities(StdinHandle);
 	return 0;
 }
