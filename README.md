@@ -13,8 +13,8 @@ A project to learn about VT100 compatability and other fancy terminal emulation.
     - Main Screen
     - Alternate
 - Scrolling Margins
-- SGR Terminal Sequence
-- DBCS Flags
+- SGR (Set Graphics Rendition) Terminal Escape Sequences
+- DBCS (Double-Byte Character Set) Flags
 
 - Terminal Types
     - VT100, VT102, VT220, VT420, VT520
@@ -28,6 +28,14 @@ A project to learn about VT100 compatability and other fancy terminal emulation.
 - Sequences intercepted when written to the output stream
 - Query state is emitted into the input stream when `ENABLE_VIRTUAL_TERMINAL_PROCESSING`
   is set.
+  
+- [Console Virtual Terminal Sequences](https://docs.microsoft.com/en-us/windows/console/console-virtual-terminal-sequences)
+- [Using High-Level Input and Output Functions](https://docs.microsoft.com/en-us/windows/console/using-the-high-level-input-and-output-functions)
+- UTF-8 Support:
+  - Input: [SetConsoleCP](https://docs.microsoft.com/en-us/windows/console/setconsolecp)
+  - Output: [SetConsoleOutputCP](https://docs.microsoft.com/en-us/windows/console/setconsoleoutputcp)
+  
+- [Pseudoconsoles](https://docs.microsoft.com/en-us/windows/console/pseudoconsoles)
 
 ### References
 
@@ -54,3 +62,7 @@ A project to learn about VT100 compatability and other fancy terminal emulation.
 - https://github.com/AmokHuginnsson/replxx
 - https://github.com/antirez/linenoise (Linux/BSD only)
 - https://github.com/darkestkhan/vt100
+
+## Even more resources
+
+- https://www.ecma-international.org/publications-and-standards/standards/ecma-48/
