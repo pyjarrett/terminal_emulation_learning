@@ -45,9 +45,15 @@ struct ConsoleHandles
     HANDLE err = INVALID_HANDLE_VALUE;
 
     DWORD outMode = 0, inMode = 0, errMode = 0;
+
+    void set();
 };
 
 void printCapabilities(const ConsoleHandles &consoleHandles);
+void printCodePage();
+
+void enableUTF8();
+ConsoleHandles enableVirtualTerminalSequences(const ConsoleHandles& consoleHandles);
 
 } // namespace windows
 } // namespace console
