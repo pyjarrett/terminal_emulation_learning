@@ -51,6 +51,22 @@ A project to learn about VT100 compatability and other fancy terminal emulation.
 - `TERM`
 - `TERMCAP`
 - `TERMPATH`
+- termcap
+- pty (pseudoterminal) vs tty
+- pseudoterminal, a set of terminals, forming a master/slave pair
+	- BSD pseudoterminals are deprecated
+	- System V terminals are also known as "Unix 98 pseudoterminals" on Linux
+	- `/dev/ptmx` pseudoterminal multiplexer is used to create pseudoterminal
+	  pairs in `/dev/pts`
+
+### Look up 
+
+- stty
+- setserial
+- tput, tset
+- setterm
+- `ioctl_console`
+- How does ANSI standard differ from VT100?
 
 ### References
 
