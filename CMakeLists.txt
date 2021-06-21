@@ -14,8 +14,10 @@ if (WIN32)
         ${VT100_SRCS}
         src/windows_modes.cpp
         )
-endif(WIN32)
 
-if (WIN32)
     add_executable(print_windows_modes src/print_windows_modes.cpp ${VT100_SRCS})
 endif(WIN32)
+
+if (UNIX)
+    add_executable(print_linux_modes src/print_linux_modes.cpp)
+endif (UNIX)

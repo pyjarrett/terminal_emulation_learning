@@ -67,11 +67,16 @@ A project to learn about VT100 compatability and other fancy terminal emulation.
 - setterm
 - `ioctl_console`
 - How does ANSI standard differ from VT100?
+- "virtual console"
+
 
 ### References
 
 - https://man7.org/linux/man-pages/man3/termios.3.html
 - https://www.mit.edu/afs.new/athena/system/rhlinux/redhat-6.2-docs/HOWTOS/other-formats/html/Text-Terminal-HOWTO-html/Text-Terminal-HOWTO-9.html
+- https://blog.nelhage.com/2009/12/a-brief-introduction-to-termios/
+- https://blog.nelhage.com/2009/12/a-brief-introduction-to-termios-termios3-and-stty/
+- https://en.m.wikibooks.org/wiki/Serial_Programming/termios
 
 ## VT100 and Readline-like projects
 
