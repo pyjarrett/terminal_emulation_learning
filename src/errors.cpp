@@ -1,13 +1,13 @@
 #include "errors.h"
 
+#include <cstdlib>
 #include <iostream>
 
 namespace errors {
 
-void Die(const char *Message)
+void die(const char* Message)
 {
-    // use '\n' to force a flush.
-    std::cerr << Message << '\n';
+    std::cerr << Message << std::endl;
     std::exit(EXIT_FAILURE);
 }
 

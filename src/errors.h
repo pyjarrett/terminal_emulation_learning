@@ -2,6 +2,6 @@
 
 namespace errors {
 
-void Die (const char* Message);
+void die (const char* Message);
 
 } // namespace errors
