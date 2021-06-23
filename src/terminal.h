@@ -1,16 +1,5 @@
 #pragma once
 
-#include <cassert>    // assert
-#include <cstdio>     // fileno, FILE
-#include <iomanip>    // setw
-#include <iostream>   // cin, cout, cerr
-#include <functional> // std::function
-#include <map>
-#include <memory>     // unique_ptr
-#include <string>
-#include <termios.h>  // POSIX Standard: 7.1-2 General Terminal Interface
-#include <unistd.h>   // POSIX Standard: 2.10 Symbolic Constants
-
 /**
  * Provides an abstract notion of getting and applying terminal capabilities
  * and settings.  The goal is to make it as simple as possible to set up

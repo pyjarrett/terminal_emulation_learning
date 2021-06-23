@@ -13,12 +13,13 @@ set(TEL_SRCS
 if (WIN32)
     set(TEL_SRCS
         ${TEL_SRCS}
-        src/windows/windows_modes.cpp
+        src/windows/windows_terminal.cpp
         )
 
-    add_executable(print_windows_modes
-        src/examples/print_windows_modes.cpp
-        ${TEL_SRCS})
+    add_executable(windows_example
+        ${TEL_SRCS}
+        src/examples/windows_example.cpp
+        )
 endif(WIN32)
 
 if (UNIX)
