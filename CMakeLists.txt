@@ -1,23 +1,23 @@
 cmake_minimum_required(VERSION 3.17)
-project(vt100_compat)
+project(terminal_emulation_learning)
 
 set(CMAKE_CXX_STANDARD 17)
 
-set(VT100_COMMON_CXX_FLAGS "${VT100_COMMON_CXX_FLAGS} -Wall -Wextra")
+set(TEL_COMMON_CXX_FLAGS "${TEL_COMMON_CXX_FLAGS} -Wall -Wextra")
 
-set(VT100_SRCS
+set(TEL_SRCS
     src/errors.cpp
     )
 
 if (WIN32)
-    set(VT100_SRCS
-        ${VT100_SRCS}
+    set(TEL_SRCS
+        ${TEL_SRCS}
         src/windows_modes.cpp
         )
 
-    add_executable(print_windows_modes src/print_windows_modes.cpp ${VT100_SRCS})
+    add_executable(print_windows_modes src/print_windows_modes.cpp ${TEL_SRCS})
 endif(WIN32)
 
 if (UNIX)
-    add_executable(print_linux_modes src/print_linux_modes.cpp)
+    add_executable(print_linux_modes src/print_linux_modes.cpp src/terminal.h src/linux_terminal.cpp)
 endif (UNIX)
