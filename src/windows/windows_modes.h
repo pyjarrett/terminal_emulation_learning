@@ -1,6 +1,6 @@
 #pragma once
 
-#include "errors.h"
+#include "../errors.h"
 
 #include <iostream>
 #include <map>

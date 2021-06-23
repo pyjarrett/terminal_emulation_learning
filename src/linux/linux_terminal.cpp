@@ -6,7 +6,7 @@
 #include <string>
 #include <termios.h>  // POSIX Standard: 7.1-2 General Terminal Interface
 #include <unistd.h>   // POSIX Standard: 2.10 Symbolic Constants
-#include "terminal.h"
+#include "../terminal.h"
 
 namespace terminal {
 

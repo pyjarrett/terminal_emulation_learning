@@ -1,4 +1,4 @@
-#include "windows_modes.h"
+#include "../windows/windows_modes.h"
 
 int main()
 {

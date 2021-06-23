@@ -7,17 +7,27 @@ set(TEL_COMMON_CXX_FLAGS "${TEL_COMMON_CXX_FLAGS} -Wall -Wextra")
 
 set(TEL_SRCS
     src/errors.cpp
+    src/terminal.h
     )
 
 if (WIN32)
     set(TEL_SRCS
         ${TEL_SRCS}
-        src/windows_modes.cpp
+        src/windows/windows_modes.cpp
         )
 
-    add_executable(print_windows_modes src/print_windows_modes.cpp ${TEL_SRCS})
+    add_executable(print_windows_modes
+        src/examples/print_windows_modes.cpp
+        ${TEL_SRCS})
 endif(WIN32)
 
 if (UNIX)
-    add_executable(print_linux_modes src/print_linux_modes.cpp src/terminal.h src/linux_terminal.cpp)
+    set(TEL_SRCS
+        ${TEL_SRCS}
+        src/linux/linux_terminal.cpp
+        )
+
+    add_executable(linux_example
+        src/examples/linux_example.cpp
+        ${TEL_SRCS})
 endif (UNIX)

@@ -22,7 +22,7 @@
 #include <linux/kd.h>
 #include <linux/vt.h>
 
-#include "terminal.h"
+#include "../terminal.h"
 
 int main()
 {
